@@ -19,6 +19,7 @@
 
 const titleElem = document.querySelector("h1");
 console.log(titleElem);
+
 const btnElem = document.querySelector(".btn");
 console.log(btnElem);
 
@@ -27,15 +28,31 @@ const img2Elem = document.querySelector(".imgOn");
 
 let isOn = false;
 
+
 btnElem.addEventListener("click", function (){
+    let result = "";
+    let resultClass = "";
 
     if(isOn === true){
         img1Elem.style.display = "block";
         img2Elem.style.display = "none";
+        btnElem.innerText = "Turn me on";
+        btnElem.classList.add(text-warning)
+        //btnElem.classList.add(bg-danger);
+        //resultClass = "bg-warning";
     }
     else{
         img1Elem.style.display = "none";
         img2Elem.style.display = "block";
+        btnElem.innerText = "Turn me off";
+        //btnElem.classList.add(bg-danger);
+        //resultClass = "bg-danger, btn";
+
     }
+    //reset
     isOn = !isOn;
+
+    // btnElem.className = "";
+    // btnElem.innerText = result;
+    // btnElem.classList.add(resultClass);
 })
