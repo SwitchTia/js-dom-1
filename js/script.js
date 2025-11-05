@@ -18,7 +18,9 @@
 // Rendete il tutto un po più bello e creativo
 
 const titleElem = document.querySelector("h1");
-const btnElem = document.querySelector("btn");
+console.log(titleElem);
+const btnElem = document.querySelector(".btn");
+console.log(btnElem);
 
 const img1Elem = document.querySelector(".imgOff");
 const img2Elem = document.querySelector(".imgOn");
@@ -28,12 +30,12 @@ let isOn = false;
 btnElem.addEventListener("click", function (){
 
     if(isOn === true){
-        img1Elem.style.display = "none";
-        img2Elem.style.display = "block";
-    }
-    else{
         img1Elem.style.display = "block";
         img2Elem.style.display = "none";
+    }
+    else{
+        img1Elem.style.display = "none";
+        img2Elem.style.display = "block";
     }
     isOn = !isOn;
 })
